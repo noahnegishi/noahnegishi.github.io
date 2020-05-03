@@ -461,7 +461,7 @@
       // If not detected, add polyfill
 
       var script = document.createElement('script');
-      script.src = 'vendor/webxr-polyfill.min.js';
+      script.src = 'VR/vendor/webxr-polyfill.min.js';
       document.getElementsByTagName('head')[0].appendChild(script);
 
       script.addEventListener('load', function () {
