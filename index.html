@@ -13,9 +13,9 @@
     
     <link rel="icon" href="favicon.ico">
     <link rel="manifest" href="manifest.webmanifest">
-    <link rel="stylesheet" type="text/css" href="styles/webxr.css">
+    <link rel="stylesheet" type="text/css" href="VR/styles/webxr.css">
 
-    <script src="lib/telemetry.js"></script>
+    <script src="VR/lib/telemetry.js"></script>
     <script>
       MozillaResearch.telemetry.start({
         analytics: true,
@@ -25,10 +25,10 @@
       MozillaResearch.telemetry.performance.mark('LoaderParsingStart');
     </script>
 
-    <script src="Build/UnityLoader.js"></script>
+    <script src="VR/UnityLoader.js"></script>
     <script>
         UnityLoader.SystemInfo.mobile = false;  // Workaround to force `UnityLoader` to actually load on mobile.
-        window.gameInstance = UnityLoader.instantiate('gameContainer', 'Build/VR.json', {
+        window.gameInstance = UnityLoader.instantiate('gameContainer', 'VR/VR.json', {
           Module: {
             // `preserveDrawingBuffer` is needed for WebVR content to be mirrored to the `<canvas>`.
             webglContextAttributes: {
